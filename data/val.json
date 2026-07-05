@@ -1,0 +1,302 @@
+[
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-20 | Timestamp: 2024-03-20 06:03:11 | Detection: Vehicle (conf: 0.72) near entrance | Duration: 62 seconds | Prior activity last hour: 3 | Business hours: No",
+    "output": "TRIAGE DECISION: MONITOR\n\nJustification: Vehicle stationary near the entrance for 62 seconds at 72% confidence before business hours with very low prior activity (3 detections). A vehicle idling at the main entrance before hours without a registered reason warrants observation. Attempt plate identification and verify against expected arrivals; escalate if occupants approach the entrance."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-01 | Timestamp: 2024-03-16 14:52:36 | Detection: Person (conf: 0.60) near parking lot | Duration: 7 seconds | Prior activity last hour: 11 | Business hours: Yes",
+    "output": "TRIAGE DECISION: IGNORE\n\nJustification: Borderline confidence person detection (60%) in the parking lot during business hours with moderate prior activity (11 detections) and a 7-second duration. Detection is too brief and too low confidence to suggest anything beyond routine pedestrian activity in the lot. No escalation criteria are met."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-19 | Timestamp: 2024-03-16 21:15:33 | Detection: Person (conf: 0.73) near parking lot | Duration: 42 seconds | Prior activity last hour: 4 | Business hours: No",
+    "output": "TRIAGE DECISION: MONITOR\n\nJustification: Moderate confidence person detection (73%) in the parking lot after business hours with low prior activity (4 detections) and a 42-second sustained presence. The duration suggests the individual is not simply transiting the lot. This may be a late employee but warrants observation. Continue monitoring via CAM-19 and adjacent cameras; escalate if the subject moves toward building access points."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-14 | Timestamp: 2024-03-21 04:07:11 | Detection: Fire (conf: 0.93) near perimeter | Duration: 64 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: ESCALATE\n\nJustification: Fire detected along the perimeter at 93% confidence for 64 seconds at 4:07 AM with zero prior activity. High confidence and sustained duration confirm an active fire event. A perimeter fire at this hour may indicate arson and poses a risk of spread to the building. Notify building management and emergency services immediately and evacuate any on-site personnel."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-08 | Timestamp: 2024-03-19 15:02:55 | Detection: Person (conf: 0.54) near loading bay | Duration: 5 seconds | Prior activity last hour: 14 | Business hours: Yes",
+    "output": "TRIAGE DECISION: IGNORE\n\nJustification: A 54% confidence person detection at the loading bay during business hours with 14 prior detections and a minimum 5-second duration is not a credible security event. Confidence at this level cannot support reliable identification and the loading bay is expected to be active during operational hours. Disregard entirely."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-12 | Timestamp: 2024-03-21 15:02:17 | Detection: Animal (conf: 0.66) near loading bay | Duration: 9 seconds | Prior activity last hour: 7 | Business hours: Yes",
+    "output": "TRIAGE DECISION: IGNORE\n\nJustification: Animal detected at 66% confidence near the loading bay for 9 seconds during business hours with 7 prior detections. Detection type is non-threatening and confidence is below actionable threshold. No security concern present."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-14 | Timestamp: 2024-03-22 01:55:44 | Detection: Person (conf: 0.85) near loading bay | Duration: 119 seconds | Prior activity last hour: 1 | Business hours: No",
+    "output": "TRIAGE DECISION: ESCALATE\n\nJustification: Person detected at the loading bay at 85% confidence for nearly 2 minutes at 1:55 AM with near-zero prior activity (1 detection). No authorized loading operations are scheduled at this hour and the extended dwell time strongly suggests an active access attempt. Dispatch on-site security immediately, seal all bay doors remotely, and preserve footage from CAM-14 from 01:53 onward."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-10 | Timestamp: 2024-03-21 20:28:37 | Detection: Vehicle (conf: 0.73) near loading bay | Duration: 88 seconds | Prior activity last hour: 3 | Business hours: No",
+    "output": "TRIAGE DECISION: MONITOR\n\nJustification: Vehicle stationary at the loading bay for 88 seconds at 73% confidence after hours with low prior activity (3 detections). An unscheduled vehicle at the loading bay for this duration post-hours is anomalous. Verify via live feed whether loading activity is occurring and attempt plate identification; escalate if no authorized activity can be confirmed."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-14 | Timestamp: 2024-03-22 13:22:37 | Detection: Vehicle (conf: 0.61) near perimeter | Duration: 7 seconds | Prior activity last hour: 18 | Business hours: Yes",
+    "output": "TRIAGE DECISION: IGNORE\n\nJustification: Vehicle detected at 61% confidence near the perimeter during business hours with very high prior activity (18 detections) and a 7-second observation window. Perimeter vehicle activity at this volume during the day is consistent with external road traffic and service vehicles. No security threshold is met. No action required."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-15 | Timestamp: 2024-03-19 01:14:22 | Detection: Fire (conf: 0.84) near parking lot | Duration: 63 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: ESCALATE\n\nJustification: Fire detected in the parking lot at 84% confidence for 63 seconds at 1:14 AM with zero prior activity. High confidence and extended duration confirm an active fire event. Parking lot fires carry risk of vehicle fuel ignition and rapid spread to adjacent areas. Notify emergency services and on-site security immediately and prevent all personnel from approaching the parking area."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-01 | Timestamp: 2024-03-15 02:33:51 | Detection: Weapon (conf: 0.90) near server room | Duration: 46 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: DISPATCH\n\nJustification: Weapon detected adjacent to the server room at 90% confidence for 46 seconds at 2:33 AM with zero prior activity. An armed individual targeting a high-value infrastructure asset at this hour is a critical security emergency. Contact law enforcement immediately, remotely seal all server room access, alert IT incident response, and instruct all on-site personnel to shelter in place. Preserve footage from CAM-01 from 02:31 onward."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-15 | Timestamp: 2024-03-15 02:53:19 | Detection: Weapon (conf: 0.91) near loading bay | Duration: 38 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: DISPATCH\n\nJustification: High-confidence weapon detection (91%) at the loading bay at 2:53 AM with 38 seconds of sustained presence and zero prior activity. Loading bays are a common intrusion vector and an armed presence here at this hour is an unambiguous threat. Contact law enforcement immediately, secure all bay doors remotely, and preserve all footage from CAM-15 from 02:51 onward for law enforcement."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-03 | Timestamp: 2024-03-19 21:07:44 | Detection: Person (conf: 0.76) near loading bay | Duration: 64 seconds | Prior activity last hour: 4 | Business hours: No",
+    "output": "TRIAGE DECISION: MONITOR\n\nJustification: Person detected at the loading bay for 64 seconds at 76% confidence after hours with low prior activity (4 detections). Sustained after-hours presence at a loading bay without a corresponding delivery record is atypical. Cross-reference with shift and delivery logs and monitor via live feed; escalate if the subject interacts with any access hardware."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-08 | Timestamp: 2024-03-15 09:22:17 | Detection: Animal (conf: 0.60) near parking lot | Duration: 7 seconds | Prior activity last hour: 16 | Business hours: Yes",
+    "output": "TRIAGE DECISION: IGNORE\n\nJustification: Borderline confidence animal detection (60%) in a non-critical zone during business hours with high prior activity volume (16 detections) and a 7-second transient presence. This does not meet any threshold for security concern. Disregard unless the same camera produces a sustained high-confidence detection."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-20 | Timestamp: 2024-03-17 06:28:14 | Detection: Person (conf: 0.75) near perimeter | Duration: 46 seconds | Prior activity last hour: 4 | Business hours: No",
+    "output": "TRIAGE DECISION: MONITOR\n\nJustification: Person detected along the perimeter for 46 seconds at 75% confidence in the early morning with low prior activity (4 detections). The duration suggests loitering rather than passing through. Monitor via adjacent cameras to track the subject's direction of travel; escalate if they approach any access point or restricted zone."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-11 | Timestamp: 2024-03-22 10:31:19 | Detection: Vehicle (conf: 0.58) near parking lot | Duration: 6 seconds | Prior activity last hour: 20 | Business hours: Yes",
+    "output": "TRIAGE DECISION: IGNORE\n\nJustification: Low confidence vehicle detection (58%) in the parking lot at maximum prior activity (20 detections) during business hours with a 6-second duration. A parking lot at peak capacity during the day will routinely generate incidental low-confidence detections. No anomaly is present. No response required."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-01 | Timestamp: 2024-03-22 02:52:19 | Detection: Fire (conf: 0.96) near server room | Duration: 87 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: DISPATCH\n\nJustification: Near-certain fire detection (96%) adjacent to the server room for 87 continuous seconds at 2:52 AM with zero prior activity. A confirmed fire at this proximity to critical IT infrastructure demands the fastest possible emergency response. Dispatch fire services, activate suppression systems, evacuate all on-site personnel, and notify IT incident response and building management simultaneously. Preserve footage from CAM-01 from 02:50 onward."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-17 | Timestamp: 2024-03-17 02:45:38 | Detection: Weapon (conf: 0.91) near restricted area | Duration: 43 seconds | Prior activity last hour: 1 | Business hours: No",
+    "output": "TRIAGE DECISION: DISPATCH\n\nJustification: Weapon detected in a restricted area at 91% confidence for 43 seconds at 2:45 AM with near-zero prior activity (1 detection). An armed individual inside a restricted zone at this hour represents the highest possible threat level to facility security. Contact law enforcement immediately, lock down the restricted zone remotely, shelter all on-site personnel in place, and preserve footage from CAM-17 from 02:43 onward."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-13 | Timestamp: 2024-03-15 02:04:18 | Detection: Person (conf: 0.84) near restricted area | Duration: 92 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: ESCALATE\n\nJustification: High-confidence person detection (84%) in a restricted area for 92 seconds at 2 AM with zero prior activity is a serious security breach indicator. No authorized personnel should be in a restricted zone at this hour without a logged reason. Security must respond immediately to investigate and all restricted area access logs should be audited."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-04 | Timestamp: 2024-03-15 01:44:03 | Detection: Person (conf: 0.86) near server room | Duration: 81 seconds | Prior activity last hour: 1 | Business hours: No",
+    "output": "TRIAGE DECISION: ESCALATE\n\nJustification: Person detected outside the server room for 81 seconds at 86% confidence at 1:44 AM with near-zero prior activity (1 detection). Server rooms are high-value targets and this duration of presence at this hour is irreconcilable with authorized activity. Dispatch security immediately, lock server room access remotely, and notify the IT security team."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-09 | Timestamp: 2024-03-15 02:17:08 | Detection: Weapon (conf: 0.94) near perimeter | Duration: 36 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: DISPATCH\n\nJustification: High-confidence weapon detection (94%) along the perimeter at 2:17 AM with 36 seconds of duration and zero prior activity indicates an armed individual near the facility boundary. This is consistent with a staged intrusion attempt. Contact law enforcement immediately, alert all on-site personnel, and initiate lockdown procedures. Do not open any perimeter access points until law enforcement clears the area."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-13 | Timestamp: 2024-03-16 08:22:39 | Detection: Vehicle (conf: 0.74) near restricted area | Duration: 50 seconds | Prior activity last hour: 5 | Business hours: No",
+    "output": "TRIAGE DECISION: MONITOR\n\nJustification: Vehicle near a restricted area at 74% confidence for 50 seconds before business hours with low prior activity (5 detections) is an unusual pattern. Vehicles should not be stationary adjacent to restricted zones without a clear operational reason. Verify against any authorized pre-shift access schedules; escalate if the vehicle does not depart promptly or if individuals are observed exiting toward the restricted area."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-11 | Timestamp: 2024-03-18 01:15:48 | Detection: Weapon (conf: 0.94) near restricted area | Duration: 46 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: DISPATCH\n\nJustification: High-confidence weapon detection (94%) in a restricted area for 46 seconds at 1:15 AM with zero prior activity. An armed individual inside a restricted zone at this hour is the highest possible threat scenario. Contact law enforcement immediately, lock down the restricted zone remotely, direct all on-site personnel to shelter in place, and preserve footage from CAM-11 from 01:13 onward. No personnel should approach the restricted zone until law enforcement clears the scene."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-19 | Timestamp: 2024-03-22 01:33:44 | Detection: Fire (conf: 0.98) near restricted area | Duration: 92 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: DISPATCH\n\nJustification: Near-certain fire detection (98%) in a restricted area for 92 continuous seconds at 1:33 AM with zero prior activity. This is an unambiguous fire emergency in a sensitive zone. Dispatch emergency services immediately, activate all available suppression systems, evacuate all on-site personnel, and notify building management and security leadership simultaneously. Treat the restricted zone as compromised until cleared by emergency services."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-02 | Timestamp: 2024-03-16 04:35:17 | Detection: Fire (conf: 0.98) near restricted area | Duration: 85 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: DISPATCH\n\nJustification: Near-certain fire detection (98%) in a restricted area for 85 continuous seconds at 4:35 AM with zero prior activity. Confidence at this level leaves no ambiguity; this is a confirmed fire in a sensitive zone. Dispatch emergency services immediately, activate all available suppression systems, evacuate any on-site personnel, and notify building management and security leadership. The restricted zone should be assumed compromised until cleared by emergency services."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-01 | Timestamp: 2024-03-18 03:58:01 | Detection: Fire (conf: 0.96) near entrance | Duration: 86 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: DISPATCH\n\nJustification: Near-certain fire detection (96%) at the main entrance for 86 continuous seconds at 3:58 AM with zero prior activity. A fire at the primary building entry at this confidence level is confirmed and demands immediate emergency response. Dispatch fire services immediately, seal the entrance, evacuate any on-site personnel, and notify building management and security leadership. This may constitute deliberate arson and footage from CAM-01 should be preserved from 03:56 onward."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-18 | Timestamp: 2024-03-17 20:17:42 | Detection: Person (conf: 0.76) near loading bay | Duration: 57 seconds | Prior activity last hour: 5 | Business hours: No",
+    "output": "TRIAGE DECISION: MONITOR\n\nJustification: Person detected at the loading bay for 57 seconds at 76% confidence after hours with low prior activity (5 detections). Sustained after-hours presence at a loading bay without a corresponding delivery record is atypical. Cross-reference with shift and delivery logs; escalate if the subject interacts with bay doors or access hardware."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-05 | Timestamp: 2024-03-15 19:21:58 | Detection: Person (conf: 0.73) near perimeter | Duration: 57 seconds | Prior activity last hour: 6 | Business hours: No",
+    "output": "TRIAGE DECISION: MONITOR\n\nJustification: Person detected along the perimeter for 57 seconds at 73% confidence after hours with moderate prior activity (6 detections). Duration well exceeds a simple pass-through and warrants sustained observation. Track movement via adjacent cameras and escalate if the subject approaches any access point or restricted zone."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-19 | Timestamp: 2024-03-18 06:28:39 | Detection: Person (conf: 0.74) near server room | Duration: 51 seconds | Prior activity last hour: 3 | Business hours: No",
+    "output": "TRIAGE DECISION: MONITOR\n\nJustification: Person detected near the server room at 74% confidence for 51 seconds before business hours with very low prior activity (3 detections). Server room proximity before operations begin with no apparent scheduled maintenance is concerning. Cross-reference immediately with IT staff schedules and after-hours access authorizations; escalate to on-site security if no authorized personnel match is confirmed."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-10 | Timestamp: 2024-03-18 00:29:41 | Detection: Person (conf: 0.90) near perimeter | Duration: 134 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: ESCALATE\n\nJustification: High-confidence person detection (90%) along the perimeter for over 2 minutes at 12:29 AM with zero prior activity. Extended perimeter presence at this confidence level during deep off-hours is a strong indicator of surveillance or a staged intrusion. Dispatch on-site security to the perimeter immediately, increase coverage on all adjacent cameras, and be prepared to contact law enforcement if physical contact with the perimeter boundary is detected."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-12 | Timestamp: 2024-03-17 05:33:08 | Detection: Vehicle (conf: 0.77) near entrance | Duration: 69 seconds | Prior activity last hour: 3 | Business hours: No",
+    "output": "TRIAGE DECISION: MONITOR\n\nJustification: Vehicle present near the entrance for 69 seconds at 77% confidence before business hours with very low prior activity (3 detections). An unscheduled vehicle at the main entrance before hours for this duration warrants investigation. Attempt plate identification and verify against expected arrivals; escalate if occupants approach the entrance."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-14 | Timestamp: 2024-03-17 01:42:22 | Detection: Person (conf: 0.85) near loading bay | Duration: 117 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: ESCALATE\n\nJustification: Person detected near the loading bay at 85% confidence for nearly 2 minutes at 1:42 AM with zero prior activity. No authorized loading operations are scheduled at this hour and the duration strongly implies an active access attempt. Dispatch on-site security immediately, secure all bay doors remotely, and preserve footage from CAM-14 from 01:40 onward."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-02 | Timestamp: 2024-03-23 02:33:17 | Detection: Person (conf: 0.88) near restricted area | Duration: 114 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: ESCALATE\n\nJustification: High-confidence person detection (88%) in a restricted area for over 110 seconds at 2:33 AM with zero prior activity. There is no valid operational explanation for an individual remaining in a restricted zone at this hour for this duration. Dispatch on-site security immediately, activate remote lockdown of the restricted zone, and preserve footage from CAM-02 from 02:31 onward for investigation."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-18 | Timestamp: 2024-03-18 12:17:36 | Detection: Vehicle (conf: 0.61) near loading bay | Duration: 8 seconds | Prior activity last hour: 15 | Business hours: Yes",
+    "output": "TRIAGE DECISION: IGNORE\n\nJustification: Low confidence vehicle detection (61%) at the loading bay during business hours with high prior activity (15 detections) and an 8-second duration. Vehicle presence at the loading bay during operational hours at this frequency is consistent with scheduled deliveries and logistics operations. No anomaly is indicated. No follow-up required."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-07 | Timestamp: 2024-03-15 00:14:58 | Detection: Weapon (conf: 0.94) near restricted area | Duration: 31 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: DISPATCH\n\nJustification: Near-certain weapon detection (94%) in a restricted area at 12:14 AM with 31 seconds of duration and zero prior activity is an active armed security emergency. Law enforcement must be contacted immediately. Lock down the restricted area remotely, instruct all on-site personnel to shelter in place, and preserve footage from CAM-07 from 00:12 onward. Do not deploy unarmed personnel under any circumstances."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-12 | Timestamp: 2024-03-20 09:14:07 | Detection: Animal (conf: 0.62) near loading bay | Duration: 8 seconds | Prior activity last hour: 9 | Business hours: Yes",
+    "output": "TRIAGE DECISION: IGNORE\n\nJustification: Low confidence animal detection (62%) near the loading bay during business hours with 9 prior detections and an 8-second duration. Animal presence in active zones during operating hours is common and carries no security implication. Confidence does not meet actionable threshold. No response required."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-10 | Timestamp: 2024-03-18 10:29:44 | Detection: Vehicle (conf: 0.63) near perimeter | Duration: 10 seconds | Prior activity last hour: 11 | Business hours: Yes",
+    "output": "TRIAGE DECISION: IGNORE\n\nJustification: Vehicle detected at 63% confidence along the perimeter for 10 seconds during business hours with 11 prior detections. Perimeter vehicle activity is normal during operating hours and this detection does not approach any escalation threshold. No action warranted."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-03 | Timestamp: 2024-03-21 03:58:33 | Detection: Vehicle (conf: 0.83) near restricted area | Duration: 139 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: ESCALATE\n\nJustification: Vehicle stationed near a restricted area for over 2 minutes at 83% confidence at 3:58 AM with zero prior activity. No legitimate reason exists for a vehicle to occupy this sensitive zone at this hour. Security must respond immediately to identify the vehicle and challenge any occupants; escalate to DISPATCH if access to the restricted zone is attempted."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-07 | Timestamp: 2024-03-16 02:52:09 | Detection: Weapon (conf: 0.93) near server room | Duration: 29 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: DISPATCH\n\nJustification: High-confidence weapon detection (93%) adjacent to the server room at 2:52 AM with 29 seconds of duration and zero prior activity is a critical armed threat to high-value infrastructure. Contact law enforcement immediately, remotely seal all server room access, alert IT incident response, and direct all on-site personnel to shelter in place. Preserve footage from CAM-07 from 02:50 onward for law enforcement handoff."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-07 | Timestamp: 2024-03-19 04:38:09 | Detection: Person (conf: 0.86) near server room | Duration: 99 seconds | Prior activity last hour: 1 | Business hours: No",
+    "output": "TRIAGE DECISION: ESCALATE\n\nJustification: High-confidence person detection (86%) near the server room for 99 seconds at 4:38 AM with near-zero prior activity (1 detection). This is a critical anomaly. The server room is a high-value target and a near-100-second presence at this hour with no operational justification indicates a potential breach attempt. Dispatch on-site security immediately, lock the server room remotely, and notify IT incident response."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-03 | Timestamp: 2024-03-16 00:41:33 | Detection: Fire (conf: 0.90) near server room | Duration: 77 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: ESCALATE\n\nJustification: Fire detected adjacent to the server room at 90% confidence for 77 seconds at 12:41 AM with zero prior activity. High confidence and sustained duration rule out a transient false positive. A fire this close to critical infrastructure at this hour demands immediate escalation. Notify emergency services, activate suppression systems, alert IT incident response, and evacuate any on-site personnel."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-16 | Timestamp: 2024-03-15 20:17:55 | Detection: Person (conf: 0.77) near loading bay | Duration: 48 seconds | Prior activity last hour: 4 | Business hours: No",
+    "output": "TRIAGE DECISION: MONITOR\n\nJustification: Person present at the loading bay for 48 seconds at 77% confidence after hours with low prior activity (4 detections). Loading bays are sensitive access points and unscheduled after-hours presence warrants active monitoring. Cross-reference with delivery and overtime logs; escalate immediately if the subject interacts with bay doors or access hardware."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-04 | Timestamp: 2024-03-18 22:11:44 | Detection: Vehicle (conf: 0.71) near parking lot | Duration: 88 seconds | Prior activity last hour: 5 | Business hours: No",
+    "output": "TRIAGE DECISION: MONITOR\n\nJustification: Vehicle in the parking lot at 71% confidence for 88 seconds at 10:11 PM with low prior activity (5 detections). A vehicle idling in the lot for this duration late at night with minimal background activity is worth monitoring. Review footage to determine if occupants are present and whether any activity is directed at other vehicles or the building; escalate if individuals exit and approach the facility."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-19 | Timestamp: 2024-03-18 16:02:17 | Detection: Person (conf: 0.60) near loading bay | Duration: 10 seconds | Prior activity last hour: 7 | Business hours: Yes",
+    "output": "TRIAGE DECISION: IGNORE\n\nJustification: Person detected at 60% confidence near the loading bay for 10 seconds at the end of business hours with 7 prior detections. Confidence is at the lower bound of detection reliability and context is entirely consistent with end-of-shift activity. No response warranted."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-12 | Timestamp: 2024-03-19 02:03:55 | Detection: Fire (conf: 0.87) near loading bay | Duration: 74 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: ESCALATE\n\nJustification: Fire detected at the loading bay at 87% confidence for 74 seconds at 2:03 AM with zero prior activity. High confidence and extended duration confirm an active fire at this access point. The loading bay is a combustible environment and fire in this zone poses significant structural and safety risk. Notify emergency services immediately, seal all bay access, and alert any on-site personnel to clear the area."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-13 | Timestamp: 2024-03-23 14:37:08 | Detection: Vehicle (conf: 0.57) near parking lot | Duration: 6 seconds | Prior activity last hour: 17 | Business hours: Yes",
+    "output": "TRIAGE DECISION: IGNORE\n\nJustification: Low confidence vehicle detection (57%) in the parking lot during business hours with very high prior activity (17 detections) and a 6-second observation window. A parking lot at this activity level during the day routinely generates incidental low-confidence detections. No security threshold is met. No action required."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-01 | Timestamp: 2024-03-17 11:03:28 | Detection: Animal (conf: 0.66) near perimeter | Duration: 9 seconds | Prior activity last hour: 7 | Business hours: Yes",
+    "output": "TRIAGE DECISION: IGNORE\n\nJustification: Animal detected at 66% confidence along the perimeter during business hours with moderate prior activity (7 detections) and a 9-second duration. Animal presence at the perimeter is a common environmental occurrence and does not constitute a security event. Detection type and context do not trigger any escalation criteria. No response required."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-06 | Timestamp: 2024-03-15 00:47:33 | Detection: Fire (conf: 0.96) near restricted area | Duration: 60 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: DISPATCH\n\nJustification: Near-certain fire detection (96%) in a restricted area for a full minute at 12:47 AM with zero prior activity is a life-safety and security emergency. A fire in a restricted zone may indicate arson in addition to presenting structural risk. Emergency services must be dispatched immediately. Evacuate all on-site personnel, activate suppression systems, and notify building management and security leadership simultaneously."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-14 | Timestamp: 2024-03-19 04:07:44 | Detection: Weapon (conf: 0.93) near perimeter | Duration: 33 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: DISPATCH\n\nJustification: High-confidence weapon detection (93%) along the perimeter for 33 seconds at 4:07 AM with zero prior activity. An armed individual at the facility boundary before dawn indicates a staged armed intrusion. Contact law enforcement immediately, initiate full facility lockdown, alert all on-site personnel to shelter in place, and do not open any perimeter access points until law enforcement clears the area. Preserve footage from CAM-14 from 04:05 onward."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-18 | Timestamp: 2024-03-16 01:55:13 | Detection: Weapon (conf: 0.90) near parking lot | Duration: 33 seconds | Prior activity last hour: 1 | Business hours: No",
+    "output": "TRIAGE DECISION: DISPATCH\n\nJustification: Weapon detected in the parking lot at 90% confidence for 33 seconds at 1:55 AM with near-zero prior activity (1 detection). An armed individual in the facility parking lot at this hour poses an immediate threat to any on-site personnel. Contact law enforcement immediately, prevent personnel from entering the parking area, and preserve footage from CAM-18 from 01:53 onward. Do not deploy unarmed security to the parking lot."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-07 | Timestamp: 2024-03-18 23:37:02 | Detection: Vehicle (conf: 0.79) near restricted area | Duration: 78 seconds | Prior activity last hour: 2 | Business hours: No",
+    "output": "TRIAGE DECISION: MONITOR\n\nJustification: Vehicle near a restricted area at 79% confidence for 78 seconds at 11:37 PM with near-zero prior activity (2 detections). Vehicles should not be positioned adjacent to restricted zones after hours without explicit authorization. Review footage for vehicle identification and visible occupants; escalate if individuals exit toward the restricted zone or if the vehicle fails to depart within a reasonable timeframe."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-14 | Timestamp: 2024-03-17 05:07:41 | Detection: Person (conf: 0.71) near loading bay | Duration: 71 seconds | Prior activity last hour: 3 | Business hours: No",
+    "output": "TRIAGE DECISION: MONITOR\n\nJustification: Person detected near the loading bay for 71 seconds at 71% confidence before business hours with very low prior activity (3 detections). Pre-hours presence at a loading bay for over a minute is atypical without a corresponding delivery or shift record. Monitor closely and escalate if the subject interacts with any access hardware or bay doors."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-05 | Timestamp: 2024-03-20 01:09:28 | Detection: Weapon (conf: 0.95) near restricted area | Duration: 33 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: DISPATCH\n\nJustification: Near-certain weapon detection (95%) in a restricted area at 1:09 AM with 33 seconds of sustained presence and zero prior activity is an active armed intrusion into a sensitive zone. Law enforcement must be contacted immediately. Lock down the restricted area remotely, instruct all on-site personnel to shelter in place, and preserve footage from CAM-05 from 01:07 onward."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-02 | Timestamp: 2024-03-15 19:38:44 | Detection: Person (conf: 0.70) near perimeter | Duration: 59 seconds | Prior activity last hour: 6 | Business hours: No",
+    "output": "TRIAGE DECISION: MONITOR\n\nJustification: Person detected along the perimeter for 59 seconds at 70% confidence after hours with moderate prior activity (6 detections). Duration well exceeds a simple pass-through and warrants sustained observation. Track movement via adjacent cameras and escalate if the subject approaches any access point or restricted zone."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-09 | Timestamp: 2024-03-23 01:07:28 | Detection: Person (conf: 0.86) near perimeter | Duration: 137 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: ESCALATE\n\nJustification: High-confidence person detection (86%) along the perimeter for over 135 seconds at 1:07 AM with zero prior activity. This is a prolonged high-confidence detection at the facility boundary during deep off-hours, strongly consistent with active reconnaissance or a staged intrusion attempt. Dispatch on-site security to the perimeter without delay and prepare to escalate to law enforcement if any physical contact with the boundary is detected."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-16 | Timestamp: 2024-03-15 04:37:09 | Detection: Vehicle (conf: 0.82) near restricted area | Duration: 128 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: ESCALATE\n\nJustification: Vehicle stationed near a restricted area for over 2 minutes at 82% confidence at 4:37 AM with zero prior activity. No legitimate reason exists for a vehicle to occupy this zone at this hour. Security must respond to identify the vehicle and challenge any occupants; escalate to DISPATCH if any attempt to access the restricted zone is observed."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-14 | Timestamp: 2024-03-15 04:07:55 | Detection: Vehicle (conf: 0.83) near restricted area | Duration: 125 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: ESCALATE\n\nJustification: A vehicle has been stationed near a restricted area for over 2 minutes at 83% confidence at 4 AM with zero prior activity. There is no legitimate reason for a vehicle to be in this location at this hour. Security should respond to identify the vehicle and challenge any occupants; escalate to DISPATCH immediately if occupants are observed attempting to access the restricted zone."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-11 | Timestamp: 2024-03-18 20:55:17 | Detection: Person (conf: 0.76) near perimeter | Duration: 64 seconds | Prior activity last hour: 4 | Business hours: No",
+    "output": "TRIAGE DECISION: MONITOR\n\nJustification: Person detected along the perimeter at 76% confidence for 64 seconds after hours with low prior activity (4 detections). A sustained presence at the perimeter after business hours for over a minute demands active observation. Monitor for any physical interaction with the perimeter boundary; escalate immediately if the subject attempts to climb, cut, or otherwise breach the perimeter."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-06 | Timestamp: 2024-03-16 01:33:02 | Detection: Person (conf: 0.88) near server room | Duration: 98 seconds | Prior activity last hour: 1 | Business hours: No",
+    "output": "TRIAGE DECISION: ESCALATE\n\nJustification: High-confidence person detection (88%) adjacent to the server room for over 90 seconds at 1:33 AM with near-zero prior activity (1 detection). Unauthorized proximity to the server room at this hour and for this duration is a high-priority security concern. Dispatch security immediately, lock the server room remotely, notify IT incident response, and audit server room access logs for the past 24 hours."
+  },
+  {
+    "instruction": "Analyze this security detection log and provide a triage decision with justification.",
+    "input": "Camera: CAM-14 | Timestamp: 2024-03-16 02:07:33 | Detection: Person (conf: 0.89) near restricted area | Duration: 124 seconds | Prior activity last hour: 0 | Business hours: No",
+    "output": "TRIAGE DECISION: ESCALATE\n\nJustification: High-confidence person detection (89%) in a restricted area for over 2 minutes at 2:07 AM with zero prior activity is a serious breach indicator. The extended duration and sensitive zone combination leaves no room for an innocent explanation. Security must respond immediately, the restricted area must be locked down remotely, and access logs must be audited."
+  }
+]

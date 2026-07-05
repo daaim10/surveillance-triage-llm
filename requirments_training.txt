@@ -1,0 +1,9 @@
+unsloth
+transformers
+peft
+trl
+bitsandbytes
+datasets
+wandb
+pyyaml
+accelerate

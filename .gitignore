@@ -1,0 +1,31 @@
+# Virtual environment - yours is named finetuning
+finetuning/
+venv/
+.venv/
+env/
+ENV/
+
+# Model outputs - too large for GitHub
+outputs/
+adapters/
+*.zip
+*.bin
+*.safetensors
+*.gguf
+*.pt
+*.pth
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
