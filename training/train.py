@@ -117,7 +117,7 @@ def train(config_path):
         warmup_steps=config["warmup_steps"],
         weight_decay=config["weight_decay"],
         lr_scheduler_type=config["lr_scheduler_type"],
-        evaluation_strategy="steps",
+        eval_strategy="steps",
         eval_steps=50,
         save_strategy="steps",
         save_steps=100,
