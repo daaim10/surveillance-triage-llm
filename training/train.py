@@ -7,6 +7,7 @@ from datasets import Dataset
 from unsloth import FastLanguageModel
 from trl import SFTTrainer
 from transformers import TrainingArguments
+from unsloth import UnslothTrainer, UnslothTrainingArguments
 
 # ── Prompt template ───────────────────────────────────────
 # Three fields matching your dataset structure exactly
@@ -134,15 +135,43 @@ def train(config_path):
     )
 
     # Trainer
-    trainer = SFTTrainer(
-        model=model,
-        tokenizer=tokenizer,
-        train_dataset=train_dataset,
-        eval_dataset=val_dataset,
-        dataset_text_field="text",
-        max_seq_length=config["max_seq_length"],
-        args=training_args,
-    )
+    trainer = UnslothTrainer(
+    model=model,
+    tokenizer=tokenizer,
+    train_dataset=train_dataset,
+    eval_dataset=val_dataset,
+    dataset_text_field="text",
+    max_seq_length=config["max_seq_length"],
+    dataset_num_proc=2,
+    args=UnslothTrainingArguments(
+        output_dir=config["output_dir"],
+        num_train_epochs=config["num_train_epochs"],
+        per_device_train_batch_size=config[
+            "per_device_train_batch_size"
+        ],
+        gradient_accumulation_steps=config[
+            "gradient_accumulation_steps"
+        ],
+        learning_rate=config["learning_rate"],
+        warmup_steps=config["warmup_steps"],
+        weight_decay=config["weight_decay"],
+        lr_scheduler_type=config["lr_scheduler_type"],
+        eval_strategy="steps",
+        eval_steps=50,
+        save_strategy="steps",
+        save_steps=100,
+        save_total_limit=2,
+        load_best_model_at_end=True,
+        metric_for_best_model="eval_loss",
+        greater_is_better=False,
+        fp16=fp16_enabled,
+        bf16=bf16_enabled,
+        logging_steps=10,
+        seed=config["seed"],
+        report_to="wandb",
+        run_name=config["wandb_run_name"],
+    ),
+)
 
     # Train
     trainer_stats = trainer.train()
