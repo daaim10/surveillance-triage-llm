@@ -32,3 +32,6 @@ Thumbs.db
 
 # Environment variables - never commit this
 .env
+
+# Scripts we don't want tracked
+download_adapter.py
